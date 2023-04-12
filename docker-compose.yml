@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    cronitor:
+        build: .
+        image: mgoldsborough/cronitor
+        container_name: cronitor_heartbeat
+        environment:
+         - API_KEY=${API_KEY}
+         - MONITOR_KEY=${MONITOR_KEY}
